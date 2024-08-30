@@ -22,6 +22,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'primary-gradient': 'linear-gradient(to right, #6a36ff, #ac5fe6)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
