@@ -29,8 +29,13 @@ export default function Hero() {
           Start Now
         </Button>
         <Button
-          className="px-10 py-5 focus:outline-none flex gap-x-2 rounded-lg text-white font-bold text-lg border-2 border-white hover:gap-x-3 transition-all"
-          endContent={<ArrowRight size={25} />}
+          className="px-10 py-5 focus:outline-none flex gap-x-2 rounded-lg text-white font-bold text-lg border-2 border-white"
+          endContent={
+            <ArrowRight
+              size={25}
+              className="transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
+            />
+          }
         >
           Trial
         </Button>
