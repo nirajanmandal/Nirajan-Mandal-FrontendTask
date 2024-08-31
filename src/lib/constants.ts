@@ -6,3 +6,7 @@ export enum Heading {
 export enum WhySaaslyHeading {
   title = "We optimize marketing for business continuity",
 }
+
+export enum FeaturesHeading {
+  title = "We make it easy to track all data analytics",
+}

@@ -37,11 +37,11 @@ export default function Hero() {
       </section>
 
       <section className="flex gap-x-4 mt-16">
-        <Button className="flex items-center justify-center bg-primary-gradient focus:outline-none px-10 py-8 rounded-lg text-white font-bold text-lg">
+        <Button className="flex items-center justify-center bg-primary-gradient focus:outline-none px-10 py-8 rounded-xl text-white font-bold text-lg">
           Start Now
         </Button>
         <Button
-          className="justify-items-center px-10 py-[31px] focus:outline-none flex gap-x-2 rounded-lg text-white font-bold text-lg border-2 border-white"
+          className="justify-items-center px-10 py-[31px] focus:outline-none flex gap-x-2 rounded-xl text-white font-bold text-lg border-2 border-white"
           endContent={
             <ArrowRight
               size={25}

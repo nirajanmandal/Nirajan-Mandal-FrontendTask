@@ -4,6 +4,7 @@ import { ChartPie, Layers, TrendingUp } from "lucide-react";
 import { TypographyMuted } from "../TypographyMuted";
 import { CgMenuGridO } from "react-icons/cg";
 import WhySaaslyGrpah from "../icons/WhySaaslyGrpah";
+import { Button } from "@nextui-org/react";
 
 export default function WhySaasly() {
   return (
@@ -75,6 +76,9 @@ export default function WhySaasly() {
           </div>
         </div>
       </section>
+      <Button className="flex items-center justify-center mx-auto bg-primary-gradient focus:outline-none px-10 py-8 rounded-xl text-white font-bold text-lg">
+        Learn More
+      </Button>
     </section>
   );
 }
