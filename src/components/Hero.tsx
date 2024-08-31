@@ -159,7 +159,7 @@ export default function Hero() {
         </Card>
       </section>
 
-      <section className="my-10">
+      <section className="my-20">
         <Brands />
       </section>
     </section>
