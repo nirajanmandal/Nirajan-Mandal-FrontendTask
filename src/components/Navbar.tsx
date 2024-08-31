@@ -56,7 +56,7 @@ export default function NavbarComponent() {
   ];
 
   return (
-    <Navbar className="flex items-center justify-between text-white w-full py-[20px]">
+    <Navbar className="flex items-center justify-between text-white w-full py-[20px] mt-2">
       <NavbarBrand>
         <Sassly width="94" height="32" />
       </NavbarBrand>

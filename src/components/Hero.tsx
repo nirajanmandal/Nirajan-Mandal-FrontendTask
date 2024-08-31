@@ -3,8 +3,8 @@ import { TypographyH1 } from "./TypographyH1";
 import { Heading } from "@/lib/constants";
 import { TypographyMuted } from "./TypographyMuted";
 import { Button } from "@nextui-org/react";
-import { BsArrowRight } from "react-icons/bs";
 import { ArrowRight } from "lucide-react";
+import { Card, CardHeader, CardTitle } from "./ui/card";
 
 export default function Hero() {
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
         />
       </section>
 
-      <section className="flex gap-x-4 mt-12">
+      <section className="flex gap-x-4 mt-16">
         <Button className="bg-primary-gradient focus:outline-none px-10 py-5 rounded-lg text-white font-bold text-lg">
           Start Now
         </Button>
@@ -39,6 +39,28 @@ export default function Hero() {
         >
           Trial
         </Button>
+      </section>
+
+      <section className="flex items-center justify-center mt-16">
+        <Card className="relative w-[1016px] h-[400px] shadow-xl rounded-xl overflow-hidden bg-transparent backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white ">
+          <CardHeader>
+            <CardTitle>
+              <input
+                placeholder="asdfd"
+                className="w-full h-full text-black placeholder:text-red"
+              />
+            </CardTitle>
+          </CardHeader>
+          {/* <div className="absolute top-0 -z-20">
+            <Image
+              src={"/Bg.png"}
+              alt="bg"
+              width={1016}
+              height={400}
+              className="object-cover"
+            />
+          </div> */}
+        </Card>
       </section>
     </section>
   );
