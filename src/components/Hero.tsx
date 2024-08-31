@@ -7,6 +7,7 @@ import { ArrowRight, ChartNoAxesColumn, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import GraphSVG from "./icons/GraphSVG";
+import StatCard from "./StatCard";
 
 export default function Hero() {
   return (
@@ -44,7 +45,7 @@ export default function Hero() {
       </section>
 
       <section className="flex items-center justify-center mt-16 w-full">
-        <Card className="relative w-full h-[400px] shadow-xl rounded-xl overflow-hidden bg-transparent backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white ">
+        <Card className="relative mx-[100px] border-none w-full h-[400px] shadow-xl rounded-xl overflow-hidden bg-transparent backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white">
           <CardHeader>
             <CardTitle className="flex items-center gap-x-[25px]">
               <div className="flex items-center gap-x-2">
@@ -58,34 +59,32 @@ export default function Hero() {
               />
             </CardTitle>
           </CardHeader>
-          <Card className="bg-white h-full mx-6 border-none">
-            <div className="p-8 max-w-6xl mx-auto space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <StatCard
-                  icon={<TrendingUp color="#0097FE" size={40} />}
-                  title="All Traffic"
-                  value="574.34k"
-                />
-                <StatCard
-                  icon={<GraphSVG width="40" height="40" />}
-                  title="Spent this month"
-                  value="$682.5"
-                />
-                <StatCard
-                  icon={<ChartNoAxesColumn color="#0097FE" size={40} />}
-                  title="Earnings"
-                  value="$350.40"
-                />
-              </div>
+          <Card className="bg-white h-full mx-6 border-none p-6">
+            <div className="flex gap-x-4 w-full">
+              <StatCard
+                icon={<TrendingUp color="#0097FE" size={40} />}
+                title="All Traffic"
+                value="574.34k"
+              />
+              <StatCard
+                icon={<GraphSVG width="40" height="40" />}
+                title="Spent this month"
+                value="$682.5"
+              />
+              <StatCard
+                icon={<ChartNoAxesColumn color="#0097FE" size={40} />}
+                title="Earnings"
+                value="$350.40"
+              />
             </div>
           </Card>
-          <div className="absolute top-0 -z-20">
+          <div className="absolute top-0 -z-20 w-full">
             <Image
               src={"/Bg.png"}
               alt="bg"
               width={1016}
               height={400}
-              className="object-cover"
+              className="object-cover w-full"
             />
           </div>
         </Card>
@@ -93,21 +92,3 @@ export default function Hero() {
     </section>
   );
 }
-
-type StatCardProps = {
-  icon: React.ReactElement;
-  title: string;
-  value: string;
-};
-// Stat Card Component
-const StatCard = ({ icon, title, value }: StatCardProps) => (
-  <Card className="border-muted">
-    <CardContent className="p-6 flex items-center space-x-4">
-      <span className="bg-[#F6F7FE] p-3 rounded-full">{icon}</span>
-      <div>
-        <p className="text-base font-semibold text-muted-foreground">{title}</p>
-        <h3 className={"text-2xl font-bold text-accent-foreground"}>{value}</h3>
-      </div>
-    </CardContent>
-  </Card>
-);
