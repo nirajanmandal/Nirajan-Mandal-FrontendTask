@@ -3,6 +3,7 @@ import { TypographyH1 } from "../TypographyH1";
 import { ChartPie, Layers, TrendingUp } from "lucide-react";
 import { TypographyMuted } from "../TypographyMuted";
 import { CgMenuGridO } from "react-icons/cg";
+import WhySaaslyGrpah from "../icons/WhySaaslyGrpah";
 
 export default function WhySaasly() {
   return (
@@ -13,8 +14,8 @@ export default function WhySaasly() {
           className="text-[#14358A] text-center font-medium w-[576px]"
         />
       </div>
-      <section className="grid grid-cols-3 gap-x-9 w-full">
-        <div className="space-y-16">
+      <section className="grid grid-cols-3 gap-x-9 w-full justify-center ml-20">
+        <div className="space-y-16 w-[233px]">
           <div className="space-y-4">
             <div className="bg-icon-gradient w-fit rounded-lg p-4">
               <Layers size={32} className="text-white" />
@@ -42,9 +43,11 @@ export default function WhySaasly() {
           </div>
         </div>
 
-        <div>mid section</div>
+        <div className="-ml-48 -mt-20">
+          <WhySaaslyGrpah width="679" height="701" />
+        </div>
 
-        <div className="space-y-16">
+        <div className="space-y-16 w-[233px]">
           <div className="space-y-4">
             <div className="bg-icon-gradient w-fit rounded-lg p-4">
               <CgMenuGridO size={32} className="text-white" />
