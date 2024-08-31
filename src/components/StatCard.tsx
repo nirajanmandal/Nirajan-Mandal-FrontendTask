@@ -8,7 +8,7 @@ type StatCardProps = {
 
 export default function StatCard({ icon, title, value }: StatCardProps) {
   return (
-    <Card className="border-muted w-full">
+    <Card className="border-muted w-full shadow-none">
       <CardContent className="p-6 flex items-center space-x-4">
         <span className="bg-[#F6F7FE] p-3 rounded-full">{icon}</span>
         <div>

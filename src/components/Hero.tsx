@@ -16,6 +16,7 @@ import StatCard from "./StatCard";
 import BalanceGraph from "./icons/BalanceGraph";
 import TableComponent from "./Table";
 import { ChartComponent } from "./Chart";
+import { Brands } from "./Brands";
 
 export default function Hero() {
   return (
@@ -53,7 +54,7 @@ export default function Hero() {
       </section>
 
       <section className="flex items-center justify-center mt-16 w-full">
-        <Card className="relative mx-[100px] border-none w-full shadow-xl rounded-xl overflow-hidden bg-transparent backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white">
+        <Card className="relative mx-[100px] border-none w-full shadow-2xl shadow-blue-500/20 rounded-xl overflow-hidden bg-transparent backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white">
           <CardHeader className="">
             <CardTitle className="flex items-center gap-x-[25px]">
               <div className="flex items-center gap-x-2">
@@ -156,6 +157,10 @@ export default function Hero() {
             />
           </div>
         </Card>
+      </section>
+
+      <section className="my-10">
+        <Brands />
       </section>
     </section>
   );
