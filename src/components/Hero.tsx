@@ -20,28 +20,29 @@ import { Brands } from "./Brands";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center">
+    <section className="flex flex-col items-center justify-center relative">
       <Image
-        src={"/BackgroundHero2.png"}
+        src={"/BackgroundHero.svg"}
         alt="backgroundHero"
         fill
         className="h-full w-full object-cover -z-[999]"
       />
+      {/* <HeroBackground className="h-full w-full -z-[999]" /> */}
 
       <section className="w-full max-w-[700px] text-center mt-20 space-y-6">
         <TypographyH1 title={Heading.title} className="text-white" />
         <TypographyMuted
           subTitle={Heading.subTitle}
-          className="text-white text-base px-[120px]"
+          className="text-white text-base px-4 md:px-[120px]"
         />
       </section>
 
-      <section className="flex gap-x-4 mt-16">
-        <Button className="flex items-center justify-center bg-primary-gradient focus:outline-none px-10 py-8 rounded-xl text-white font-bold text-lg">
+      <section className="flex-col sm:flex gap-x-4 mt-16 w-full px-4">
+        <Button className="w-full sm:w-fit mb-4 sm:mb-0 flex items-center justify-center bg-primary-gradient focus:outline-none px-10 py-8 rounded-xl text-white font-bold text-lg">
           Start Now
         </Button>
         <Button
-          className="justify-items-center px-10 py-[31px] focus:outline-none flex gap-x-2 rounded-xl text-white font-bold text-lg border-2 border-white"
+          className="w-full sm:w-fit justify-items-center px-10 py-[31px] focus:outline-none flex gap-x-2 rounded-xl text-white font-bold text-lg border-2 border-white"
           endContent={
             <ArrowRight
               size={25}
@@ -54,49 +55,69 @@ export default function Hero() {
       </section>
 
       <section className="flex items-center justify-center mt-16 w-full">
-        <Card className="relative mx-[100px] border-none w-full shadow-2xl shadow-blue-500/20 rounded-xl overflow-hidden bg-transparent backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white">
+        <Card className="relative mx-4 md:mx-[100px] border-none w-full shadow-2xl shadow-blue-500/20 rounded-xl overflow-hidden bg-transparent md:backdrop-blur-lg bg-gradient-to-b from-[#4D5BE2]/10 to-white">
           <CardHeader className="">
             <CardTitle className="flex items-center gap-x-[25px]">
-              <div className="flex items-center gap-x-2">
+              <div className="hidden sm:flex items-center gap-x-2">
                 <div className="w-[14px] h-[14px] rounded-full bg-white"></div>
                 <div className="w-[14px] h-[14px] rounded-full bg-white"></div>
                 <div className="w-[14px] h-[14px] rounded-full bg-white"></div>
               </div>
               <Input
                 placeholder="www.saas.com/users"
-                className="text-black placeholder:text-red"
+                className="text-black placeholder:text-red w-full"
               />
             </CardTitle>
           </CardHeader>
-          <Card className="bg-white h-full mx-6 border-none p-6">
-            <div className="flex gap-x-4 w-full">
+          <Card className="bg-white h-full mx-6 border-none sm:p-6 p-3">
+            <div className="flex gap-x-4 w-full flex-wrap gap-y-3">
               <StatCard
-                icon={<TrendingUp color="#0097FE" size={40} />}
+                icon={
+                  <TrendingUp
+                    color="#0097FE"
+                    // size={40}
+                    className="h-5 w-5 sm:h-14 sm:w-14"
+                  />
+                }
                 title="All Traffic"
                 value="574.34k"
               />
               <StatCard
-                icon={<GraphSVG width="40" height="40" />}
+                icon={
+                  <GraphSVG
+                    // width="40"
+                    // height="40"
+                    className="h-5 w-5 sm:h-14 sm:w-14"
+                  />
+                }
                 title="Spent this month"
                 value="$682.5"
               />
               <StatCard
-                icon={<ChartNoAxesColumn color="#0097FE" size={40} />}
+                icon={
+                  <ChartNoAxesColumn
+                    color="#0097FE"
+                    // size={40}
+                    className="h-5 w-5 sm:h-14 sm:w-14"
+                  />
+                }
                 title="Earnings"
                 value="$350.40"
               />
             </div>
-            <div className="flex gap-x-4 mt-6">
+            <div className="flex gap-x-4 mt-6 gap-y-3 flex-wrap">
               <Card className="border-muted w-full py-6">
                 <CardContent>
-                  <div className="relative flex justify-between items-start rounded-2xl bg-secondary-gradient p-4">
+                  <div className="relative flex justify-between items-start rounded-2xl bg-secondary-gradient sm:p-4 p-2">
                     <div>
-                      <p className="text-lg font-semibold text-white opacity-90">
+                      <p className="text-base sm:text-lg font-semibold text-white opacity-90">
                         Credit Balance
                       </p>
-                      <h2 className="text-3xl font-bold text-white">$25,215</h2>
+                      <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                        $25,215
+                      </h2>
                     </div>
-                    <div className="flex flex-col gap-y-5 items-end">
+                    <div className="flex flex-col gap-y-2 sm:gap-y-5 items-end">
                       <Image
                         src={"/Shadow.png"}
                         alt="shadow"
@@ -121,21 +142,21 @@ export default function Hero() {
                 <CardContent className="px-0">
                   <div className="relative">
                     <div className="flex flex-col items-center justify-center gap-y-2">
-                      <p className="text-lg font-semibold text-muted-foreground">
+                      <p className="text-sm sm:text-lg font-semibold text-muted-foreground">
                         This months earnings
                       </p>
-                      <h2 className="text-3xl font-bold text-[#1B2559]">
+                      <h2 className="text-xl sm:text-3xl font-bold text-[#1B2559]">
                         $801.5
                       </h2>
                       <p className="text-green-500 mt-3 font-semibold bg-green-500/20 rounded-full w-fit p-1">
                         +2.45%
                       </p>
                     </div>
-                    <div className="absolute top-0 right-4">
+                    <div className="absolute top-0 right-2 sm:right-4">
                       <ChartNoAxesColumn
                         color="#6572EB"
-                        size={40}
-                        className="bg-muted rounded-lg p-2"
+                        // size={40}
+                        className="bg-muted rounded-lg p-1 sm:p-2 h-6 w-6 sm:h-14 sm:w-14"
                       />
                     </div>
 
@@ -147,21 +168,23 @@ export default function Hero() {
               </Card>
             </div>
           </Card>
-          <div className="absolute top-0 -z-20 w-full">
+          {/* <div className="absolute top-0 -z-20 w-full">
             <Image
-              src={"/Bg.png"}
+              src={"/Bg.svg"}
               alt="bg"
-              width={1016}
-              height={400}
-              className="object-cover w-full"
+              fill
+              className="object-cover w-full fill"
             />
-          </div>
+          </div> */}
         </Card>
       </section>
 
-      <section className="my-20">
+      {/* <section className="my-20">
         <Brands />
-      </section>
+      </section> */}
     </section>
   );
+}
+function SearchBg({ className }: { className: string }) {
+  return <>rear</>;
 }

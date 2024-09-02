@@ -51,28 +51,32 @@ export default function TableComponent() {
       case "name":
         return (
           <div className="flex gap-x-3">
-            <div className="p-3 bg-[#F6F7FE] rounded-full w-fit">
+            <div className="p-2 sm:p-3 bg-[#F6F7FE] rounded-full w-fit h-fit">
               <Image
                 src={user.avatar}
                 alt={user.name}
                 width={30}
                 height={30}
-                className="object-contain"
+                className="object-contain h-4 w-4 sm:h-[30px] sm:w-[30px] max-w-max"
               />
             </div>
 
             <div className="flex flex-col">
-              <p className="capitalize text-lg text-[#1B2559] font-semibold">
+              <p className="capitalize text-sm sm:text-lg text-[#1B2559] font-semibold">
                 {user.name}
               </p>
-              <p className="text-muted-foreground font-semibold text-lg">
+              <p className="text-muted-foreground font-semibold text-xs sm:text-lg">
                 {user.date}
               </p>
             </div>
           </div>
         );
       case "status":
-        return <p className="text-[#1B2559] font-bold">{user.users}</p>;
+        return (
+          <p className="text-[#1B2559] font-bold text-sm sm:text-base">
+            {user.users}
+          </p>
+        );
       default:
         return cellValue;
     }

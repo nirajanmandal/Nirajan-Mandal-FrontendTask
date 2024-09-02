@@ -1,8 +1,14 @@
 type GraphSVGProps = {
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
+  className?: string;
 };
-export default function GraphSVG({ width, height, ...props }: GraphSVGProps) {
+export default function GraphSVG({
+  width,
+  height,
+  className,
+  ...props
+}: GraphSVGProps) {
   return (
     <svg
       width={width}
@@ -10,6 +16,7 @@ export default function GraphSVG({ width, height, ...props }: GraphSVGProps) {
       viewBox="0 0 64 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       {...props}
     >
       <rect
